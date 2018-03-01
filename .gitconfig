@@ -12,15 +12,15 @@
 [alias]
 	# Find all branches (local and remote) that contain a certain commit
 	fcmt = "!f() { \
-						git branch -r --contains $1; \
-					}; f"
+            git branch -r --contains $1; \
+          }; f"
 
 	# Edit commit messages and rebase.
 	ecmt = "!f() { \
-						git rebase -i -p HEAD~$1; \
-					}; f"
+            git rebase -i -p HEAD~$1; \
+          }; f"
 
 	# Commits from a specific date/time
 	rcmt = "!f() { \
-						git log --after=<$1> --before<$2>; \
-					}; f"
+            git log --after=<$1> --before<$2>; \
+          }; f"
