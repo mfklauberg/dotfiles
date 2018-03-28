@@ -4,7 +4,7 @@
   email = mfklauberg@gmail.com
 
 [core]
-  excludesfile = /Users/mfklauberg/.gitignore
+  excludesfile = $HOME/.gitignore
 
 [push]
   default = current
