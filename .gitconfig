@@ -12,7 +12,7 @@
   date = local
 
 [format]
-  pretty = format: %C(auto, yellow)%h %C(auto, cyan)%>(10)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
+  pretty = format: %C(auto, yellow)%h %C(auto, cyan)%>(10)%ad %C(auto, green)%<(7)%aN%C(auto, red)%d %Creset%s
 
 [alias]
   ## List all branches that contains a specific commit
