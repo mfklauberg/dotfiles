@@ -1,4 +1,3 @@
-# This is Git's per-user configuration file.
 [user]
   name = Matheus Klauberg
   email = mfklauberg@gmail.com
@@ -9,18 +8,18 @@
 [push]
   default = current
 
+[log]
+  date = local
+
+[format]
+  pretty = format: %C(auto, yellow)%h %C(auto, cyan)%>(10)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
+
 [alias]
-  # Find all branches (local and remote) that contain a certain commit
-  fcmt = "!f() { \
-            git branch -r --contains $1; \
-          }; f"
+  ## List all branches that contains a specific commit
+  find = "!fn() { git branch -r --contais $1; }; fn"
 
-  # Edit commit messages and rebase.
-  ecmt = "!f() { \
-            git rebase -i -p HEAD~$1; \
-          }; f"
+  ## Edit commit messages
+  edit = "!fn() { git rebase -i HEAD~$1; }; fn"
 
-  # Commits from a specific date/time
-  rcmt = "!f() { \
-            git log --after=<$1> --before<$2>; \
-          }; f"
+  ## List commits within a specif date range <yyyy-mm-dd hh:mm>
+  range = "!fn() { git log --after=<$1> --before=<$2> }; fn"

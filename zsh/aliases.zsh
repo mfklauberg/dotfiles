@@ -1,4 +1,4 @@
-## ALIASES ##
+# ALIASES #
 
 ## weather
 alias wwork='curl -4 http://wttr.in/Blumenau'
