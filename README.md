@@ -8,6 +8,8 @@
   - [ ] Install [n][2]
   - [ ] Update `zsh` to the latest version
   - [ ] Install [oh my zsh][3]
+- [ ] Add `.npmrc`
+- [ ] 
 
 [1]: https://brew.sh
 [2]: https://github.com/mklement0/n-install
