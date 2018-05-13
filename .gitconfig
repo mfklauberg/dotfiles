@@ -3,7 +3,7 @@
   email = mfklauberg@gmail.com
 
 [core]
-  excludesfile = $HOME/.gitignore
+  excludesfile = ~/.gitignore
 
 [push]
   default = current
@@ -16,7 +16,7 @@
 
 [alias]
   ## List all branches that contains a specific commit
-  find = "!fn() { git branch -r --contais $1; }; fn"
+  find = "!fn() { git branch -r --contains $1; }; fn"
 
   ## Edit commit messages
   edit = "!fn() { git rebase -i HEAD~$1; }; fn"
