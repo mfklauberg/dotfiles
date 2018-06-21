@@ -8,7 +8,7 @@ function open-pr() {
   # --labels   , Add a list of comma-separated labels to the PR.
   # --no-edit  , Use the data from the first commit for the PR creation.
   # --reviewer , Add a list of comma-separated users as reviewers the PR.
-  hub pull-request --copy --browse --no-edit --labels=$LABELS -reviewer
+  hub pull-request --copy --browse --no-edit --labels=$LABELS --reviewer=$REVIEWERS
 }
 
 function cpick() {
