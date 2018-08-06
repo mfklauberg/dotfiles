@@ -14,3 +14,4 @@ alias nwork='networksetup -switchtolocation "Philips"'
 
 ## utils
 alias cls='clear'
+alias .='cd && clear'
