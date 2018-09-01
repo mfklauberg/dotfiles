@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+# ~/.macos
+# based on:
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+# https://github.com/kentcdodds/dotfiles/blob/master/.macos
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+echo "Hello $(whoami)! Let's start!"
+
+# install homebrew from https://brew.sh
+echo "Installing homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo "Installing homebrew formulae"
+brew install git hub watchman yarn tree bat zsh zsh-completions
+
+echo "Configure zsh and oh-my-zsh"
+
+# set zsh as the default shell
+chsh -s $(which zsh)
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "Have to log out and log in again for the default shell work"
+
+echo "Cloning dotfiles repository"
+git clone https://github.com/mfklauberg/dotfiles "${HOME}/dotfiles"
+
+ln -s "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
+ln -s "${HOME}/dotfiles/.gitconfig" "${HOME}/.gitconfig"
+ln -s "${HOME}/dotfiles/.gitignore" "${HOME}/.gitignore"
+
+echo "Installing node and some global dependencies"
+curl -L https://git.io/n-install | bash
+
+echo "node --version: $(node --version)"
+echo "npm --version: $(npm --version)"
+
+npm install -g react-native-cli create-react-app node-gyp http-server lighthouse
+
+echo "Installing apps with brew cask"
+brew cask install google-chrome visual-studio-code-insiders skype kap /
+discord aerial spotmenu spotify spotify-notifications iterm2 slack /
+firefox telegram-desktop whatsapp
