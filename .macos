@@ -17,7 +17,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo "Hello $(whoami)! Let's start!"
 
-# install homebrew from https://brew.sh
 echo "Installing homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -32,7 +31,7 @@ chsh -s $(which zsh)
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-echo "Have to log out and log in again for the default shell work"
+echo "Don't forge to log out and log in for the default shell take effect."
 
 echo "Cloning dotfiles repository"
 git clone https://github.com/mfklauberg/dotfiles "${HOME}/dotfiles"
@@ -41,15 +40,16 @@ ln -s "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 ln -s "${HOME}/dotfiles/.gitignore" "${HOME}/.gitignore"
 
+echo "Creating symbolic link to Airport"
+ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
+
 echo "Installing node and some global dependencies"
 curl -L https://git.io/n-install | bash
 
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
 
-npm install -g react-native-cli create-react-app node-gyp http-server lighthouse
-
 echo "Installing apps with brew cask"
-brew cask install google-chrome visual-studio-code-insiders skype kap /
-discord aerial spotmenu spotify spotify-notifications iterm2 slack /
+brew cask install visual-studio-code-insiders iterm2 google-chrome /
+aerial spotify spotify-notifications slack /
 firefox telegram-desktop whatsapp
