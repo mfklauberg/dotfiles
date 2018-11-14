@@ -21,7 +21,7 @@ echo "Installing homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "Installing homebrew formulae"
-brew install git hub watchman yarn tree bat zsh zsh-completions
+brew install git hub watchman yarn zsh zsh-completions
 
 echo "Configure zsh and oh-my-zsh"
 
