@@ -5,7 +5,7 @@ mfklauberg's dotfiles.
 ## running
 
 ```
-curl https://raw.githubusercontent.com/mfklauberg/dotfiles/master/.macos | bash
+curl -#L https://raw.githubusercontent.com/mfklauberg/dotfiles/master/.macos | bash
 ```
 
 ## about
