@@ -2,8 +2,12 @@
 
 mfklauberg's dotfiles.
 
+## running
+
+```
+curl https://raw.githubusercontent.com/mfklauberg/dotfiles/master/.macos | bash
+```
+
 ## about
 
-This repository stores my some of my shell aliases and some utily shell functions, using the [z shell](http://zsh.sourceforge.net) and [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
-
-This repository also contains some [dotfiles](https://dotfiles.github.io) related to my development workflow.
+This repository contains some of my shell aliases, some utility shell functions and also other [dotfiles](https://dotfiles.github.io).
