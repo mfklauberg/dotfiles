@@ -34,3 +34,9 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+proxy=http://mfklauberg:bomdia124%40%40@192.168.253.107:3128
+export http_proxy=$proxy
+export HTTP_PROXY=$proxy
+export https_proxy=$proxy
+export HTTPS_PROXY=$proxy
