@@ -1,13 +1,7 @@
-# ALIASES #
+alias weather-work='curl -4 http://wttr.in/Blumenau'
+alias weather-home='curl -4 http://wttr.in/Pomerode'
 
-## weather
-alias wwork='curl -4 http://wttr.in/Blumenau'
-alias whome='curl -4 http://wttr.in/Pomerode'
+alias edit-zsh='vi ~/.zshrc'
+alias reload-zsh='source ~/.zshrc'
 
-## zsh
-alias ezsh='vi ~/.zshrc'
-alias rzsh='source ~/.zshrc'
-
-## utils
-alias cls='clear'
 alias .='cd && clear'
