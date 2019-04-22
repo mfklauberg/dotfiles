@@ -1,33 +1,15 @@
-function tlog() {
-  SWITCH="\033["
-  NORMAL="${SWITCH}0m"
+function print-colored-message() {
+  local color=$1
+  local message=$2
+  local none=$(no-color)
 
-  COLOR=${SWITCH}${1}
-  MESSAGE=$2
-
-  printf "${COLOR}$MESSAGE${NORMAL}\n"
+  printf "\n${color}$message${none}\n\n"
 }
 
-function twarn() {
-  YELLOW="1;33m"
-
-  tlog $YELLOW $1
+function print-ok() {
+  print-colored-message $(green-color) "$1"
 }
 
-function terror() {
-  RED="1;31m"
-
-  tlog $RED $1
-}
-
-function tok() {
-  GREEN="1;32m"
-
-  tlog $GREEN $1
-}
-
-function tdebug() {
-  GREY="0;37m"
-
-  tlog $GREY $1
+function print-error() {
+  print-colored-message $(red-color) "$1"
 }
