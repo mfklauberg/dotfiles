@@ -20,10 +20,12 @@ function wifires() {
   networksetup -switchtolocation $NETWORK_LOCATION &> /dev/null && tok "Network location switched to $NETWORK_LOCATION."
 }
 
-function cport() {
+function fport() {
   lsof -nP -i4TCP:$1 | grep LISTEN
 }
 
 function kport() {
-  cport() $1 | awk '{print $1}'
+  pid=$(fport $1 | awk '{print $2}')
+
+  kill -9 $pid
 }
