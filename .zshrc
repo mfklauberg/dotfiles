@@ -1,3 +1,11 @@
+function source-env() {
+  if [[ -r "$HOME/.dotfiles-env" ]]; then
+    source "$HOME/.dotfiles-env"
+  else
+    print-error "env file not found"
+  fi
+}
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -17,7 +25,7 @@ ZSH_CUSTOM=$HOME/dotfiles/zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-completions)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -35,8 +43,11 @@ export PATH="/usr/local/bin:$PATH"
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
-proxy=http://mfklauberg:bomdia124%40%40@192.168.253.107:3128
-export http_proxy=$proxy
-export HTTP_PROXY=$proxy
-export https_proxy=$proxy
-export HTTPS_PROXY=$proxy
+source-env
+
+export http_proxy=${proxy_work_final}
+export HTTP_PROXY=${proxy_work_final}
+export https_proxy=${proxy_work_final}
+export HTTPS_PROXY=${proxy_work_final}
+
+export GH_TOKEN=${github_jenkins}

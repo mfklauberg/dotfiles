@@ -2,4 +2,4 @@
 .DS_Store
 
 /zsh/work*.zsh
-.env
+.dotfiles-env
