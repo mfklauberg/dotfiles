@@ -1,3 +1,5 @@
+export GH_TOKEN=${github_mfklauberg}
+
 function cgit-clear() {
   git reset HEAD --hard
   git clean -fd
@@ -6,4 +8,12 @@ function cgit-clear() {
 
 function cgit-prune() {
   git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
+}
+
+function github-token-work() {
+  export GH_TOKEN=${github_jenkins}
+}
+
+function github-token-personal() {
+  export GH_TOKEN=${github_mfklauberg}
 }

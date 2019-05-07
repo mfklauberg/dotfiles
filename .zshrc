@@ -44,10 +44,3 @@ export PATH="/usr/local/bin:$PATH"
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 source-env
-
-export http_proxy=${proxy_work_final}
-export HTTP_PROXY=${proxy_work_final}
-export https_proxy=${proxy_work_final}
-export HTTPS_PROXY=${proxy_work_final}
-
-export GH_TOKEN=${github_jenkins}
