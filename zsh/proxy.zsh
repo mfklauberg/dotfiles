@@ -3,6 +3,8 @@ function proxy-switch-work() {
   export {HTTP,HTTPS}_PROXY=${proxy_work_final}
 
   reload-zsh
+
+  print-ok "Proxy switched successfully."
 }
 
 function proxy-switch-reset() {
@@ -10,4 +12,6 @@ function proxy-switch-reset() {
   unset {HTTP,HTTPS}_PROXY
 
   reload-zsh
+
+  print-ok "Proxy reseted successfully."
 }

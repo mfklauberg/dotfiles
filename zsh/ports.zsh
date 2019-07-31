@@ -7,5 +7,5 @@ function port-find() {
 function port-kill() {
   PORT=$1
 
-  kill -9 $(fport $PORT | awk '{print $2}')
+  kill -9 $(port-find $PORT | awk '{print $2}')
 }

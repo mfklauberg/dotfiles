@@ -10,6 +10,10 @@ function cgit-prune() {
   git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
 }
 
+function cgit-fuck-it() {
+  git push --force
+}
+
 function github-token-work() {
   export GH_TOKEN=${github_jenkins}
 }
