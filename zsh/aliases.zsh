@@ -5,3 +5,14 @@ alias edit-zsh='vi ~/.zshrc'
 alias reload-zsh='source ~/.zshrc'
 
 alias .='cd && clear'
+alias please='sudo'
+
+function hide-desktop-icons() {
+  defaults write com.apple.finder CreateDesktop false
+  killall Finder
+}
+
+function show-desktop-icons() {
+  defaults write com.apple.finder CreateDesktop true
+  killall Finder
+}
