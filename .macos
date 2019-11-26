@@ -33,6 +33,7 @@ ln -s "${HOME}/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 ln -s "${HOME}/dotfiles/.gitignore" "${HOME}/.gitignore"
 ln -s "${HOME}/dotfiles/.npmrc" "${HOME}/.npmrc"
 ln -s "${HOME}/dotfiles/.dotfiles-env" "${HOME}/.dotfiles-env"
+ln -s "${HOME}/dotfiles/.prettierrc" "${HOME}/.prettierrc"
 
 echo "Creating symbolic link to Airport"
 ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
