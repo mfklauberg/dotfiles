@@ -17,6 +17,15 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo "Hello $(whoami)! Let's start!"
 
+echo "Installing homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo "Installing homebrew formulae"
+brew install git zsh zsh-completions
+
+# node will come from `n`.
+brew install yarn --ignore-dependencies
+
 echo "Configure zsh and oh-my-zsh"
 
 # set zsh as the default shell
@@ -48,3 +57,19 @@ echo "Setup expected folders"
 
 mkdir -p "${HOME}/projects"
 
+echo "Installing tools with Brew and Brew Cask"
+
+# browser
+brew cask google-chrome
+
+# devtools
+brew cask docker iterm2 postman visual-studio-code-insiders
+
+# misc
+brew cask kap
+
+# music
+brew cask spotify, spotify-notifications
+
+# social
+brew cask slack skype skype-for-business whatsapp
