@@ -2,8 +2,8 @@
 
 # ~/.macos
 # based on:
-# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 # https://github.com/kentcdodds/dotfiles/blob/master/.macos
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -15,16 +15,10 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-echo "Hello $(whoami)! Let's start!"
+echo "Hello $(whoami)!"
 
 echo "Installing homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-echo "Installing homebrew formulae"
-brew install git zsh zsh-completions
-
-# node will come from `n`.
-brew install yarn --ignore-dependencies
 
 echo "Configure zsh and oh-my-zsh"
 
@@ -37,17 +31,20 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo "Cloning dotfiles repository"
 git clone https://github.com/mfklauberg/dotfiles "${HOME}/dotfiles"
 
-ln -sf "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
+ln -s "${HOME}/dofiles/Brewfile" "${HOME}/Brewfile"
+ln -s "${HOME}/dotfiles/.dotfiles-env" "${HOME}/.dotfiles-env"
 ln -s "${HOME}/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 ln -s "${HOME}/dotfiles/.gitignore" "${HOME}/.gitignore"
 ln -s "${HOME}/dotfiles/.npmrc" "${HOME}/.npmrc"
-ln -s "${HOME}/dotfiles/.dotfiles-env" "${HOME}/.dotfiles-env"
 ln -s "${HOME}/dotfiles/.prettierrc" "${HOME}/.prettierrc"
+ln -sf "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
 
 echo "Creating symbolic link to Airport"
 ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 
-echo "Installing node and some global dependencies"
+echo "Install node"
+
+# by using n-install, there's no need to have node already instaled.
 curl -L https://git.io/n-install | bash
 
 echo "node --version: $(node --version)"
@@ -56,7 +53,8 @@ echo "npm --version: $(npm --version)"
 echo "Setup expected folders"
 
 mkdir -p "${HOME}/projects"
+mkdir -p "${HOME}/projects/personal"
 
-echo "Installing tools with Brew and Brew Cask"
+echo "Install applications through brew"
 
-brew cask install google-chrome docker iterm2 postamn kap spotify slack skype skype-for-business whatsapp
+brew bundle
