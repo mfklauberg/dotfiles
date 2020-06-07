@@ -17,10 +17,14 @@ function network-switch-work() {
   fi
 
   network-switch-location $NETWORK_LOCATION
+
+  print-ok "🛩  ${NETWORK_LOCATION}"
 }
 
 function network-switch-reset() {
   NETWORK_LOCATION="Automatic"
 
   network-switch-location $NETWORK_LOCATION
+
+  print-ok "🛩  ${NETWORK_LOCATION}"
 }

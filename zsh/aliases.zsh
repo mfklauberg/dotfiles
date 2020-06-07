@@ -10,9 +10,13 @@ alias please='sudo'
 function hide-desktop-icons() {
   defaults write com.apple.finder CreateDesktop false
   killall Finder
+
+  print-ok "🖥 hidden"
 }
 
 function show-desktop-icons() {
   defaults write com.apple.finder CreateDesktop true
   killall Finder
+
+  print-ok "🖥 showing"
 }

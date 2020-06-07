@@ -4,7 +4,7 @@ function proxy-switch-work() {
 
   reload-zsh
 
-  print-ok "Proxy switched successfully."
+  print-ok "🔑 ${HTTP_PROXY}"
 }
 
 function proxy-switch-reset() {
@@ -13,5 +13,5 @@ function proxy-switch-reset() {
 
   reload-zsh
 
-  print-ok "Proxy reseted successfully."
+  print-ok "🔑 ${HTTP_PROXY}"
 }
