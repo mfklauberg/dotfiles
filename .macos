@@ -37,6 +37,7 @@ ln -s "${HOME}/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 ln -s "${HOME}/dotfiles/.gitignore" "${HOME}/.gitignore"
 ln -s "${HOME}/dotfiles/.npmrc" "${HOME}/.npmrc"
 ln -s "${HOME}/dotfiles/.prettierrc" "${HOME}/.prettierrc"
+ln -s "${HOME}/dotfiles/.vimrc" "${HOME}/.vimrc"
 ln -sf "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
 
 echo "Creating symbolic link to Airport"
