@@ -8,6 +8,7 @@ function cgit-prune() {
 
 function github-token-personal() {
   export GH_TOKEN=${github_mfklauberg}
+  export GITHUB_TOKEN=${github_mfklauberg}
 
   print-ok "🐙 $GH_TOKEN"
 }
