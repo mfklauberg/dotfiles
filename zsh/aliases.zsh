@@ -7,6 +7,8 @@ alias reload-zsh='source ~/.zshrc'
 alias .='cd && clear'
 alias please='sudo'
 
+alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
+
 function hide-desktop-icons() {
   defaults write com.apple.finder CreateDesktop false
   killall Finder
