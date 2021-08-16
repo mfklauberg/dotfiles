@@ -7,8 +7,13 @@ function cgit-prune() {
 }
 
 function github-token-personal() {
+  local QUIET=$1
+
   export GH_TOKEN=${github_mfklauberg}
   export GITHUB_TOKEN=${github_mfklauberg}
 
-  print-ok "🐙 $GH_TOKEN"
+  if [ "$QUIET" != "quiet" ]; then
+    print-ok "🐙 $GH_TOKEN"
+  fi
+
 }
