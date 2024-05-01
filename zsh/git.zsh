@@ -15,5 +15,4 @@ function github-token-personal() {
   if [ "$QUIET" != "quiet" ]; then
     print-ok "🐙 $GH_TOKEN"
   fi
-
 }

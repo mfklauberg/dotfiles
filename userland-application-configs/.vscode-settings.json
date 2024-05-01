@@ -1,0 +1,131 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "breadcrumbs.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeLens": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 2,
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 14,
+  "editor.fontWeight": "500",
+  "editor.inlineSuggest.enabled": true,
+  "editor.letterSpacing": 1.1,
+  "editor.lineHeight": 26,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "none",
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "eslint.packageManager": "npm",
+  "extensions.ignoreRecommendations": true,
+  "files.autoSaveDelay": 5000,
+  "files.defaultLanguage": "javascript",
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/.temp": true,
+    "**/.tmp": true,
+    "**/CVS": true,
+    "**/reports": true,
+    "**/typedocs": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": true,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": true,
+    "suppressNoRepositoryWarning": false
+  },
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.keymap": "none",
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "javascript.preferences.jsxAttributeCompletionStyle": "none",
+  "javascript.preferences.quoteStyle": "single",
+  "npm-intellisense.importDeclarationType": "const",
+  "npm-intellisense.importES6": true,
+  "npm-intellisense.importLinebreak": ";\r\n",
+  "npm-intellisense.importQuotes": "'",
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "npm-intellisense.scanDevDependencies": true,
+  "npm-intellisense.showBuildInLibs": true,
+  "prettier.configPath": "~/dotfiles/.prettierrc",
+  "scss.lint.duplicateProperties": "warning",
+  "scss.lint.float": "warning",
+  "scss.lint.important": "warning",
+  "scss.lint.zeroUnits": "error",
+  "search.exclude": {
+    "**/dist": true
+  },
+  "sort.locale": "en-us",
+  "terminal.integrated.fontSize": 14,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.preferences.jsxAttributeCompletionStyle": "none",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.newWindowDimensions": "fullscreen",
+  "window.restoreFullscreen": true,
+  "workbench.editor.enablePreview": true,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.startupEditor": "none",
+  "workbench.tree.expandMode": "singleClick",
+  "workbench.tree.indent": 14,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "redhat.telemetry.enabled": false,
+  "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "css.format.spaceAroundSelectorSeparator": true,
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "workbench.localHistory.enabled": true,
+  "workbench.cloudChanges.continueOn": "off",
+  "workbench.cloudChanges.autoResume": "off",
+  "gitlens.plusFeatures.enabled": false,
+  "gitlens.showWelcomeOnInstall": false,
+  "gitlens.showWhatsNewAfterUpgrades": false,
+  "gitlens.virtualRepositories.enabled": false,
+  "gitlens.currentLine.pullRequests.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.statusBar.pullRequests.enabled": false,
+  "playwright.reuseBrowser": true,
+  "debug.javascript.autoAttachFilter": "always",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Default Dark+",
+  "scm.showOutgoingChanges": "never"
+}

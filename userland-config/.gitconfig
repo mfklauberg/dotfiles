@@ -5,8 +5,23 @@
 [init]
 	defaultBranch = main
 
+[branch]
+  autoSetupRebase = always
+  sort = refname
+
 [core]
   excludesfile = ~/.gitignore
+	ignorecase = false
+
+[rebase]
+  autoStash = true
+  missingCommitsCheck = error
+  stat = true
+
+[fetch]
+  prune = true
+  pruneTags = true
+  showForcedUpdates = true
 
 [push]
   default = current
